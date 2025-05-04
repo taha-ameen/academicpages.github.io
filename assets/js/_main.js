@@ -19,11 +19,12 @@ $(document).ready(function () {
 
     // Apply the theme
     if (use_theme === "dark") {
-      $("html").attr("data-theme", "dark");
-      // Update icon if a theme toggle button exists
-      if ($("#theme-icon").length) {
-          $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
-      }
+      // Remove the attribute for light mode (assuming CSS defaults to light)
+      $("html").removeAttr("data-theme");
+       // Update icon if a theme toggle button exists
+       if ($("#theme-icon").length) {
+           $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
+       }
     } else { // Includes 'light' and any other case
       // Remove the attribute for light mode (assuming CSS defaults to light)
       $("html").removeAttr("data-theme");

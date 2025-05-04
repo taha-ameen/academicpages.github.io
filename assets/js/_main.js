@@ -6,28 +6,18 @@ $(document).ready(function () {
 
   // Set the theme on page load or when explicitly called
   var setTheme = function (theme) {
-    // --- MODIFIED LOGIC ---
-    // Prioritize:
-    // 1. Explicit theme passed to function
-    // 2. Theme saved in localStorage
-    // 3. Default to 'light' otherwise (ignoring browserPref for default)
-    const use_theme =
-      theme ||
-      localStorage.getItem("theme") ||
-      // $("html").attr("data-theme") || // Removed this check as it could interfere on initial load
-      'light'; // Default to light mode
+    // Apply the theme directly based on the input
+    const use_theme = theme;
 
-    // Apply the theme
     if (use_theme === "dark") {
-      // Remove the attribute for light mode (assuming CSS defaults to light)
-      $("html").removeAttr("data-theme");
-       // Update icon if a theme toggle button exists
-       if ($("#theme-icon").length) {
-           $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
-       }
-    } else { // Includes 'light' and any other case
-      // Remove the attribute for light mode (assuming CSS defaults to light)
-      $("html").removeAttr("data-theme");
+      $("html").attr("data-theme", "dark");
+      // Update icon if a theme toggle button exists
+      if ($("#theme-icon").length) {
+          $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
+      }
+    } else { // Assume light if not dark
+      // --- MODIFICATION: Explicitly set light theme attribute ---
+      $("html").attr("data-theme", "light");
        // Update icon if a theme toggle button exists
        if ($("#theme-icon").length) {
            $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
@@ -35,18 +25,19 @@ $(document).ready(function () {
     }
   };
 
-  // Set the theme when the page is ready
-  setTheme();
+  // --- MODIFIED INITIAL CALL ---
+  // Force light theme on initial page load, ignoring localStorage/browserPref for this first application.
+  setTheme('light');
 
-  // --- Original listener for OS changes ---
-  // This listener will now only apply theme changes IF localStorage is not set.
-  // Since we default to 'light' and the toggle saves to localStorage,
-  // this listener might have less impact unless localStorage is cleared.
+  // --- Listener for OS changes ---
+  // This listener will still respect localStorage. It only applies OS preference
+  // if the user hasn't explicitly chosen a theme via the toggle button.
   window
     .matchMedia('(prefers-color-scheme: dark)')
     .addEventListener("change", (e) => {
       // Only apply OS preference if the user hasn't explicitly chosen via toggle (saved in localStorage)
       if (!localStorage.getItem("theme")) {
+        // Note: We still call setTheme, which now explicitly sets light/dark attribute
         setTheme(e.matches ? "dark" : "light");
       }
     });
@@ -54,7 +45,7 @@ $(document).ready(function () {
   // --- Original Toggle Functionality ---
   // Toggle the theme manually when the button is clicked
   var toggleTheme = function () {
-    // Check the current theme by reading the attribute (or assume light if absent)
+    // Check the current theme by reading the attribute (default to 'light' if somehow unset)
     const current_theme = $("html").attr("data-theme") || 'light';
     const new_theme = current_theme === "dark" ? "light" : "dark";
     // Save the user's choice to localStorage

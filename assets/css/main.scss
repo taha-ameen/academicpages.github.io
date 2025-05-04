@@ -7,6 +7,8 @@
  * Note that the files are processed in the order they are imported, so they are partly
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
+// Custom heading color override
+
 
 @import
     "vendor/breakpoint/breakpoint",
@@ -41,3 +43,106 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+/* Add this to your theme's CSS file */
+
+/* Main container for the columns */
+.course-columns {
+  display: flex; /* Enables Flexbox */
+  flex-wrap: wrap; /* Allows columns to wrap onto the next line on small screens */
+  gap: 30px; /* Adjust the space between the columns */
+  margin-top: 20px; /* Add some space above the columns */
+  margin-bottom: 20px; /* Add some space below the columns */
+}
+
+/* Individual column styling */
+.course-column {
+  flex: 1; /* Allows columns to grow and shrink equally */
+  min-width: 300px; /* Minimum width before wrapping - adjust as needed */
+  /* If you want exactly two columns that don't stretch too wide on large screens,
+     you might use flex-basis instead of flex: 1, e.g.:
+     flex-basis: calc(50% - 15px); /* 50% minus half the gap */
+}
+
+/* Optional: Title for each column */
+.column-title {
+    font-size: 1.5em; /* Adjust size as needed */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Optional separator */
+    padding-bottom: 5px;
+}
+
+/* Styling for the course boxes (moved from inline styles) */
+.course-box {
+  border: 1px solid #ddd;
+  padding: 15px 15px 10px 15px; /* Adjusted padding slightly */
+  margin-bottom: 20px;
+  background-color: #fff; /* Optional: give boxes a white background if page bg is different */
+  border-radius: 4px; /* Optional: slightly rounded corners */
+}
+
+/* Styling for the headings within boxes (moved from inline styles) */
+.course-heading {
+  margin-top: 0;
+  margin-bottom: 10px; /* Add space below heading */
+  font-size: 1.2em; /* Adjust size */
+}
+
+/* Specific heading colors (moved from inline styles) */
+.grad-heading {
+  color: #E84A27; /* Your original orange color */
+}
+
+.undergrad-heading {
+  color: #191970; /* Example: A contrasting blue (UIUC Blue) */
+  /* Choose a color that fits your theme */
+}
+
+/* Styling for the course lists (moved from inline styles) */
+.course-list {
+  list-style-type: none;
+  padding-left: 20px; /* Keep your original indent */
+  margin-bottom: 0; /* Remove default bottom margin from ul */
+}
+
+.course-list li {
+    margin-bottom: 5px; /* Add a little space between list items */
+}
+
+
+/* --- Responsive Design --- */
+/* Make columns stack vertically on smaller screens */
+@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+  .course-columns {
+    flex-direction: column; /* Stack columns vertically */
+    gap: 0; /* No horizontal gap needed when stacked */
+  }
+
+  .course-column {
+    /* Reset flex properties if you used flex-basis */
+    flex-basis: auto;
+    width: 100%; /* Make each column take full width */
+    min-width: unset; /* Remove min-width */
+    margin-bottom: 20px; /* Add space between stacked columns */
+  }
+
+  .course-column:last-child {
+      margin-bottom: 0; /* Remove margin from the very last column */
+  }
+}
+
+
+.page__title {
+  color: #191970; 
+}
+
+// Change default navigation link text color (excluding site title/name)
+#site-nav .visible-links li:not(.masthead__menu-item--lg) a { 
+  color: #E84A27; /* Replace with your color code */
+  font-weight: bold;
+}
+
+// Change site title/name link text color
+#site-nav .visible-links li.masthead__menu-item--lg a {
+  color: #191970; /* Replace with your desired color code */
+}

@@ -6,31 +6,73 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">Articles are also available on <a href="{{site.author.googlescholar}}">Google Scholar</a>.</div>
 {% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
 
 
 
+<h2 style="color: #E84A27;">Preprints</h2>
+
+<ul style="list-style-type: disc;"> 
+  <li>
+    <u>T. Ameen</u> and B. Hajek, "Aligning Multiple Inhomogeneous Random Graphs: Fundamental Limits of Exact Recovery", <em>Under review at Operations Research</em>.
+  </li>
+  <li>
+    <u>T. Ameen</u>, K Kytölä and S.C. Park, "Slit-strip Ising boundary conformal field theory 2: Scaling limits of fusion coefficients", <em>Under review at Probability and Mathematical Physics</em>. <a href="https://arxiv.org/abs/2108.05105">[arXiv]</a>
+  </li>
+</ul>
+
+
+<h2 style="color: #E84A27;">Conference Publications</h2>
+
+
+<ul style="list-style-type: disc;"> 
+  <li>
+    <strong>[ISIT'25b]</strong> <u>T. Ameen</u> and B. Hajek, "Detecting correlation between multiple unlabeled Gaussian networks", <em>To appear at IEEE International Symposium on Information Theory (ISIT) '25</em>. <a href="https://arxiv.org/abs/2504.16279">[arXiv]</a>
+  </li>
+  <li>
+    <strong>[ISIT'25a]</strong> <u>T. Ameen</u> and B. Hajek, "Exact random graph matching with multiple graphs", <em>To appear at IEEE International Symposium on Information Theory (ISIT) '25</em>. <a href="https://arxiv.org/abs/2405.12293">[arXiv]</a>
+    <ul style="list-style-type: none; padding-left: 20px;"> 
+      <li>&mdash; Poster presented at <em>Stochastic Networks Conference</em>, 2024.</li>
+      <li>&mdash; Finalist for <em style="color: #E84A27;">INFORMS APS Best Student Paper Competition</em>, 2024.</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>[ICML'24]</strong> <u>T. Ameen</u> and B. Hajek, "Robust graph matching when nodes are corrupt", <em>International Conference on Machine Learning</em>, 2024. <a href="https://proceedings.mlr.press/v235/ameen24a.html">[Link]</a>
+  </li>
+  <li>
+    <strong>[WDC'22]</strong> <u>T. Ameen</u>, S. Sankagiri and B. Hajek, "Blockchain security when messages are lost", <em>ACM Workshop on Developments on Consensus</em>, 2022. <a href="https://dl.acm.org/doi/abs/10.1145/3560829.3563557">[Link]</a>
+  </li>
+  <li>
+    <strong>[DCC'21]</strong> <u>UIUC Info Theory Students</u>, S. Basu and L. Varshney, "The twelvefold way of non-sequential lossless compression", <em>IEEE Data Compression Conference</em>, 2021. <a href="https://ieeexplore.ieee.org/abstract/document/9418670">[Link]</a>
+  </li>
+  <li>
+    <strong>[WTS'20]</strong> <u>T. Ameen</u>, M. Hasan and M. Ismail, "A queue-length based approach to metropolized Hamiltonians for distributed scheduling in wireless networks", <em>IEEE Wireless Telecommunications Symposium</em>, 2020. <a href="https://ieeexplore.ieee.org/abstract/document/9198730">[Link]</a>
+  </li>
+  <li>
+    <strong>[Allerton'19]</strong> <u>T. Ameen</u>, S. Mukhopadhyay and S. Farhana, "A Novel Expression for Computing Time Response of LTI Systems of Arbitrary Order with Applications to Fractional and Stochastic Control", <em>Allerton Conference on Communication, Control and Computing</em>, 2019. <a href="https://ieeexplore.ieee.org/abstract/document/8919669">[Link]</a>
+  </li>
+</ul>
+
+<h2 style="color: #E84A27;">Journal Publications</h2>
+<ul style="list-style-type: disc;"> 
+  <li>
+    <strong>[TAC'23]</strong> <u>T. Ameen</u>, S. Mukhopadhyay and N. Qaddoumi, "Computing robust forward invariant sets of multidimensional nonlinear systems via geometric deformation of polytopes", <em>IEEE Transactions on Automatic Control</em>, 2023. <a href="https://ieeexplore.ieee.org/abstract/document/10198338">[Link]</a>
+  </li>
+  <li>
+    <strong>[MPAG'22]</strong> <u>T. Ameen</u>, K. Kytölä, S.C. Park and D. Radnell, "Slit-strip Ising boundary conformal field theory 1: Discrete and continuous function spaces", <em>Mathematical Physics, Analysis and Geometry</em>, Springer, 2022. <a href="https://link.springer.com/article/10.1007/s11040-022-09442-5">[Link]</a>
+  </li>
+  <li>
+    <strong>[FE'22]</strong> S. Shahriar, J. Ramesh, A. Towheed, <u>T. Ameen</u>, A. Sagahyroon and A. Al-Ali, "NICE: Narrative Integrated Career-Exploration Platform", <em>Frontiers in Education</em>, 2022. <a href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2022.798950/full">[Link]</a>
+  </li>
+  <li>
+    <strong>[Access'20]</strong> <u>T. Ameen</u>, M. Hasan and M. Ismail, "A Novel Medium Access Control Algorithm for Ad Hoc Networks based on Ising Model", <em>IEEE Access</em>, 2020. <a href="https://ieeexplore.ieee.org/abstract/document/9177004">[Link]</a>
+  </li>
+  <li>
+    <strong>[PhyCom'20]</strong> <u>T. Ameen</u>, Y. Aborahama, M. Hasan and M. Ismail, "A PDE-based approach for the evaluation of probability of starvation in video streaming", <em>Physical Communication</em>, Elsevier, 2020. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1874490720301622">[Link]</a>
+  </li>
+</ul>

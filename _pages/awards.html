@@ -1,0 +1,101 @@
+---
+layout: archive
+title: "Awards"
+permalink: /awards/
+author_profile: true
+---
+
+<style>
+  /* Basic styling for the awards list */
+  .simple-awards-list {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove default padding */
+    margin-top: 20px; /* Add some space above the list */
+    max-width: 800px; /* Optional: constrain width */
+    /* font-family: sans-serif; */ /* Optional: Set your preferred font */
+  }
+
+  .simple-awards-list li {
+    display: flex; /* Use flexbox for simple column alignment */
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 12px; /* Space between award items */
+    padding-bottom: 8px; /* Space below text before border */
+    border-bottom: 1px solid #eee; /* Light separator line */
+  }
+
+   .simple-awards-list li:last-child {
+       border-bottom: none; /* Remove border from last item */
+   }
+
+  .award-year {
+    flex-shrink: 0; /* Prevent year from shrinking */
+    /* Increased width to accommodate longer year ranges */
+    width: 120px; 
+    font-weight: bold; /* Make year stand out */
+    color: #E84A27; /* Your theme's orange color */
+    padding-right: 15px; /* Space between year and name */
+    font-size: 0.95em; /* Slightly smaller font size for year */
+  }
+
+  .award-name {
+    flex-grow: 1; /* Allow award name to take remaining space */
+    color: #333; /* Standard dark text color for readability */
+    font-size: 1em;
+    /* color: #191970; */ /* Optional: Use your theme's blue if preferred */
+  }
+
+  /* Basic responsiveness: stack columns on very small screens */
+  @media (max-width: 480px) {
+    .simple-awards-list li {
+      flex-direction: column; /* Stack year above name */
+      align-items: flex-start; /* Align items to the left */
+      border-bottom: none; /* Remove separators on mobile stack */
+      margin-bottom: 15px; /* Increase space when stacked */
+      padding-bottom: 0;
+    }
+    .award-year {
+      /* Reset width when stacked */
+      width: auto; 
+      padding-right: 0;
+      margin-bottom: 3px; /* Add small space below year when stacked */
+    }
+  }
+
+</style>
+
+<div>
+  <ul class="simple-awards-list">
+    <li>
+      <span class="award-year">2024</span>
+      <span class="award-name">INFORMS APS Best Student Paper Prize, <i>Finalist</i></span>
+    </li>
+    <li>
+      <span class="award-year">2024</span>
+      <span class="award-name">MAVIS Future Faculty Fellowship</span>
+    </li>
+    <li>
+      <span class="award-year">2024</span>
+      <span class="award-name">Robert T. Chien Memorial Award in Electrical Engineering</span>
+    </li>
+    <li>
+      <span class="award-year">2023, 2022</span>
+      <span class="award-name">Joan and Lalit Bahl Fellowship</span>
+    </li>
+    <li>
+      <span class="award-year">2021</span>
+      <span class="award-name">James M. Henderson Fellowship</span>
+    </li>
+    <li>
+      <span class="award-year">2019</span>
+      <span class="award-name">President's Cup, <i>highest GPA in undergraduate class</i></span>
+    </li>
+    <li>
+      <span class="award-year">2019</span>
+      <span class="award-name">Sheikh Khalifa Scholarship</span>
+    </li>
+    <li>
+      <span class="award-year">2015-2019</span>
+      <span class="award-name">Chancellor's Scholar Award, <i>100% tuition waiver for undergraduate study </i></span>
+    </li>
+  </ul>
+</div>

@@ -1,20 +1,20 @@
----
-title: "Teaching experience 1"
-collection: teaching
-type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
----
+# Graduate Level Coursework at UIUC
 
-This is a description of a teaching experience. You can use markdown like any other post.
+## Mathematics and Statistics
+* Real Analysis
+* Probability Theory 1
+* Probability Theory 2
+* High Dimensional Statistics
+* Stochastic Processes on Graphs
 
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
+## Engineering 
+* Random Processes
+* Statistical Learning Theory
+* Information Theory
+* Combinatorial Optimization
+* Control Systems
+* Communication Network Analysis
+* MDPs and Reinforcement Learning
+* Introduction to Optimization
+* Machine Learning
+* Quantum Information Theory

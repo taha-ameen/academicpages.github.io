@@ -11,7 +11,7 @@ I am a Ph.D. candidate in the Department of Electrical and Computer Engineering 
 
 My doctoral research involves developing and analyzing algorithms for large-scale random systems, focusing on statistical inference, performance evaluation and information recovery from network data. Specific topics include **graph alignment**, **correlation detection**, and **security of distributed protocols in blockchains**. I've also explored optimizing **resource allocation** in wireless networks during an internship at [Nokia Bell Labs](https://www.nokia.com/bell-labs/). My broader interests include **dynamic matching** and **robust decision-making** in networked environments.
 
-I graduated with B.S. degrees in Electrical Engineering and Mathematics from the [American University of Sharjah](https://www.aus.edu), where I received the President's cup for highest GPA. My research there focused on problems in **control theory, communication networks, and microwave sensing**. I also worked on the **Ising model** during a research internship at [Aalto University](https://www.aalto.fi), Finland.
+I graduated with B.S. degrees in Electrical Engineering and Mathematics from the [American University of Sharjah](https://www.aus.edu), where I received the President's cup for highest GPA. My research there focused on problems in **control theory, communication networks, and microwave sensing**. I also worked on the **Ising model** during a research internship at [Aalto University](https://www.aalto.fi/en), Finland.
 
 Outside of work, I enjoy reading, traveling and hiking. I particularly appreciate the US National Parks and aspire to eventually explore all 63!
 
@@ -23,6 +23,7 @@ Outside of work, I enjoy reading, traveling and hiking. I particularly appreciat
 * [July] I will be giving an invited talk at [INFORMS APS Conference](https://informs-aps.isye.gatech.edu/) in Atlanta, GA.
 * [June] I will be attending [IEEE ISIT](https://2025.ieee-isit.org/) in Ann Arbor, MI.
 * [June] I will be attending the [IISA conference](https://www.intindstat.org/conference2025/index) in Lincoln, NE.
+* [May] I received the [A.R. "Buck" Knight Fellowship](https://ece.illinois.edu/academics/grad/fellowships/knight) from the ECE department at UIUC.
 * [April] Two papers "[Exact random graph matching with multiple graphs](https://arxiv.org/abs/2405.12293)" and "[Detecting correlation between multiple Gaussian networks](https://arxiv.org/abs/2504.16279)" accepted to ISIT '25.
 
 
